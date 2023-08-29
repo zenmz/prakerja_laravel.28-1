@@ -42,6 +42,18 @@ Route::get('users', function (Request $data) {
     return $data['id'];
 });
 
+Route::get('tampilan', function () {
+    return view('coba');
+});
+
+Route::get('template', function () {
+    return view('template');
+});
+
+Route::get('table', function () {
+    $array = ['meja', 'kursi', 'lampu', 'pintu', 'lemari', 'buku'];
+    return view('table', compact('array'));
+});
 
 // Route::get('users/{id}', function ($id) {});
 // Route::post('users/{id}', function ($id) {});
