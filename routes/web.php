@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SiswaController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -54,6 +55,11 @@ Route::get('table', function () {
     $array = ['meja', 'kursi', 'lampu', 'pintu', 'lemari', 'buku'];
     return view('table', compact('array'));
 });
+
+Route::resource('siswa', SiswaController::class);
+
+// Route::get('siswa', [SiswaController::class, 'index']);
+// Route::get('tambahdatasiswa', [SiswaController::class, 'create']);
 
 // Route::get('users/{id}', function ($id) {});
 // Route::post('users/{id}', function ($id) {});
